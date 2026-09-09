@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Idade de pet</title>
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <h1>Descubra a idade do seu pet!</h1>
+    <form action="/idade_pet" method="post">
+        <label for="anos">Idade do pet:</label>
+        <input name="pet" type="number" id="anos">
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    {%if humano%}
+    <div class="resultado">
+        <h2>Idade humana do seu pet:</h2>
+        <p>{{humano}} anos</p>
+    </div>
+    {%endif%}
+</body>
+</html>
