@@ -9,7 +9,10 @@ def index():
 def idade_pet():
     pet = int(request.form['pet'])
 
-    humano = 24 + (pet-2) * 5
+    if pet<=0:
+        humano = 'Inválido'
+    else:
+        humano = 24 + (pet-2) * 5
 
     return render_template('index.html', pet=pet, humano=humano)
 
